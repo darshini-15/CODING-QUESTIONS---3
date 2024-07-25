@@ -1,0 +1,907 @@
+CODING QUESTIONS - 03
+
+1.Largest Element In an Array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class LargestElement {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Creating an Array
+        int arr[] = new int[5];
+
+        //Adding Array Elements
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Printing the array elements
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+
+        //Logic : Sort in Ascending Order
+        for(int i = 0; i <= arr.length - 1; i++) {
+            for(int j = i+1; j <= arr.length - 1; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        /*
+        Printing sorted array
+        System.out.println("\nSorted Array");
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        */
+
+        //Finding Largest Element
+        System.out.println("\nThe Largest Element is: " + arr[arr.length - 1]);
+    }
+}
+
+2.Smallest Element In An Array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class SmallestElement {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an array
+        int arr[] = new int[5];
+
+        //Adding Elements to Array
+        System.out.println("Enter the Array Elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Printing the Array Elements
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+
+        //Logic : Sort in Ascending Order
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        /*
+        Printing the sorted array
+        System.out.println("\nSorted Array");
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+        */
+
+        //Finding the Smallest Element
+        System.out.println("The Smallest Element is: " + arr[0]);
+    }
+}
+
+3.Smallest and Largest element in an array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class SmallestAndLargest {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an array
+        int arr[] = new int[5];
+
+        //Adding Elements to Array
+        System.out.println("Enter the Array Elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Printing the Array Elements
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+
+        //Logic : Sort in Ascending Order
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        /*
+        Printing the sorted array
+        System.out.println("\nSorted Array");
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+        */
+
+        //Finding the Smallest and Largest Element
+        System.out.println("\nThe Smallest and Largest Element is: " + arr[0] + " and " + arr[arr.length - 1]);
+    }
+}
+
+4.Second Smallest Element In An Array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class SecondSmallestElement {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an array
+        int arr[] = new int[5];
+
+        //Adding Elements to Array
+        System.out.println("Enter the Array Elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Printing the Array Elements
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+
+        //Logic : Sort in Ascending Order
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        /*
+        Printing the sorted array
+        System.out.println("\nSorted Array");
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+        */
+
+        //Finding the Second-Smallest Element
+        System.out.println("\nThe Second-Smallest Element is: " + arr[1]);
+    }
+}
+
+5.Sum of Elements in an Array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class SumOfElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Creating an Array
+        int arr[] = new int[5];
+
+        //Adding Elements to Array
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic : Add each array element to sum
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++) {
+            sum = arr[i] + sum;
+        }
+
+        //Printing the Sum
+        System.out.println("The Sum of Array Elements is: " + sum);
+    }
+}
+
+6.Reverse An Array
+=>package com.arrays;
+
+import java.util.Scanner;
+
+public class ReverseAnArray {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an array
+        int arr[] = new int[5];
+
+        //Adding Elements
+        System.out.println("Enter the Array Elements");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Printing Original Array
+        System.out.println("Original Array");
+        for(int value : arr) {
+            System.out.print(value + " ");
+        }
+
+        System.out.println();
+
+        //Logic : Reverse an Array (Using Decrementing for loop)
+        System.out.println("\nReverse Array");
+        for(int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+7.Sort the elements first half in ascending and second half in descending
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class SortArray {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[8];  //Input : 3, 2, 4, 1, 10, 30, 40, 20
+
+        //Adding the Array Elements
+        System.out.println("Enter the Array Elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic : Sort the Array in Ascending and Descending Separately wrt to "mid"
+
+        int mid = arr.length / 2;
+
+        //Sorting in Ascending
+        for(int i = 0; i < mid; i++) {
+            for(int j = i+1; j < mid; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        //Sorted in Descending Order
+        for(int i = mid; i < arr.length; i++) {
+            for(int j = i+1; j < arr.length; j++) {
+                if(arr[i] < arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        System.out.println("First half sorted in ascending and second half sorted in descending");
+        for(int i = 0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+
+    }
+}
+
+8.Frequency of Elements
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class FrequencyOfElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[5];
+
+        //Adding Array Elements
+        System.out.println("Enter the Array Elements");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter the value of X to know its frequency: ");
+        int freq = sc.nextInt();
+
+        int count = 0;
+
+        //Finding the Frequency of Array Elements
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == freq) {
+                count++;
+            }
+        }
+
+        System.out.printf("The frequency of %d is %d: ", freq, count);
+
+
+    }
+}
+
+9.Sort elements of array by frequency
+=> package com.arrays;
+
+import java.util.*;
+
+public class SortArrayByFrequency {
+
+    public static void main(String[] args) {
+        int[] array = {5, 3, 5, 2, 8, 5, 2, 8, 3, 3};
+        int[] sortedArray = sortByFrequency(array);
+
+        System.out.println("Sorted array by frequency:");
+        System.out.println(Arrays.toString(sortedArray));
+    }
+
+    public static int[] sortByFrequency(int[] array) {
+        // Step 1: Count the frequencies using a HashMap
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num : array) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        // Step 2: Create a list from array and sort based on frequency and value
+        List<Integer> list = new ArrayList<>();
+        for (int num : array) {
+            list.add(num);
+        }
+
+        list.sort((a, b) -> {
+            int freqCompare = frequencyMap.get(b).compareTo(frequencyMap.get(a));
+            if (freqCompare != 0) {
+                return freqCompare; // Sort by frequency in descending order
+            } else {
+                return a - b; // If frequencies are the same, sort by value in ascending order
+            }
+        });
+
+        // Step 3: Convert the sorted list back to an array
+        int[] sortedArray = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            sortedArray[i] = list.get(i);
+        }
+
+        return sortedArray;
+    }
+}
+
+10.Find frequency of elements in array
+=> package com.array;
+
+import java.util.Scanner;
+
+public class FrequencyOfElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[5];
+
+        //Adding Array Elements
+        System.out.println("Enter the Array Elements");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter the value of X to know its frequency: ");
+        int freq = sc.nextInt();
+
+        int count = 0;
+
+        //Finding the Frequency of Array Elements
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == freq) {
+                count++;
+            }
+        }
+
+        System.out.printf("The frequency of %d is %d: ", freq, count);
+
+
+    }
+}
+
+11.Lngest Palindrome in an array
+=> package com.arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class LongestPalindromeInArray {
+
+    public static boolean isPalindrome(int num) {
+        String str = Integer.toString(num);
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[6];
+
+        //Adding Array Elements
+        System.out.println("Enter the Array Elements");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Sort the Array
+        Arrays.sort(arr);
+
+        //Logic :
+        boolean foundPalindrome = false;
+        for(int i = arr.length - 1; i >= 0; i--) {
+            if(isPalindrome(arr[i])) {
+                System.out.println("Palindrome Found: " + arr[i]);
+                foundPalindrome = true;
+                break;
+            }
+        }
+        if(!foundPalindrome) {
+            System.out.println("Palindrome not Found");
+        }
+    }
+}
+
+12.Counting Distinct Elements In array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class DistinctElements { //Non-Repeating Element
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an array
+        int arr[] = {10, 30, 40, 20, 10, 20, 50, 10};
+
+        //Array to keep a track of visited elements
+        int visited[] = new int[arr.length];
+        int countDistinct = 0;
+
+        for(int i = 0; i < arr.length; i++) { //Comparing the First Element
+
+            if(visited[i] == 1) { //If number visited, then skip that number
+                continue;
+            }
+
+            boolean isDistinct = true;
+            for (int j = i + 1; j < arr.length; j++) {//Comparing the second element
+
+                if (arr[i] == arr[j]) { //If arr[i] and arr[j] is same then, not unique numbers
+                    visited[j] = 1;
+                    isDistinct = false; //Which results in false
+                }
+            }
+
+            //Increment the count if the number is Unique
+            if (isDistinct) {
+                countDistinct++;
+            }
+        }
+        System.out.println("Distinct Element count is: " + countDistinct);
+
+
+    }
+} 
+
+13.Repeatig elements in array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class RepeatingElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[5];
+
+        //Adding array elements
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic :
+        System.out.println("Repeated Elements");
+        for(int i = 0; i <arr.length; i++) {
+            for(int j = i+1; j < arr.length; j++) {
+                if(arr[i] == arr[j]) {
+                    System.out.print(arr[i] + " ");
+                }
+            }
+        }
+    }
+}
+
+14.Non-repeating Elements in Array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class NonRepeatingElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[5];
+
+        //Adding array elements
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic :
+        System.out.println("Non-Repeated Elements");
+        for(int i = 0; i <arr.length; i++) { //Iterates over each element of the array.
+            boolean isRepeated = false;
+            for(int j = 0; j < arr.length; j++) { //Checks if the current element is repeated by comparing it with every other element.
+                if(i!=j && arr[i] == arr[j]) {
+                    isRepeated = true;
+                    break;
+                }
+            }
+            if(!isRepeated) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+    }
+}
+
+15.Remving Duplicate elements from array
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class RemoveDuplicates { //Duplicates --> Repeating elements
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[5];
+
+        //Adding array elements
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic :
+        System.out.println("Array after removing Duplicates");
+        for(int i = 0; i < arr.length; i++) {
+            boolean duplicates = false;
+            for(int j = 0; j < i; j++) {
+                if(arr[i] == arr[j]) {
+                    duplicates = true;
+                }
+            }
+            if(duplicates == false) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+    }
+}
+
+16.Minimum Scalar Product of two vectors
+=> package com.arrays;
+
+public class MinimumScalarProduct {
+
+    public static void main(String[] args) {
+
+        int arr1[] = {10, 30, 40, 20};
+        int arr2[] = {2, 4, 5, 1};
+
+        //Sort in Ascending
+        for(int i = 0; i < arr1.length; i++) {
+            for(int j = i+1; j < arr1.length; j++) {
+                if(arr1[i] > arr1[j]) {
+                    int temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
+                }
+            }
+        }
+
+        /*Printing Ascending Order
+        for(int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+        System.out.println();
+        */
+
+        //Sort in Descending
+        for(int i = 0; i < arr2.length; i++) {
+            for(int j = i+1; j < arr2.length; j++) {
+                if(arr2[i] < arr2[j]) {
+                    int temp = arr2[i];
+                    arr2[i] = arr2[j];
+                    arr2[j] = temp;
+                }
+            }
+        }
+
+        /*Printing Descending Order
+        for(int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
+        }
+        */
+
+
+        //Loop for multiplication of ( arr1[i] * arr2[i] )
+        int product = 0;
+        for(int i = 0; i < arr1.length; i++) {
+                product = product + arr1[i] * arr2[i];
+
+        }
+        System.out.println("\nThe product of two array is: " + product);
+
+
+    }
+}
+
+17.Counting number of even and odd numbers
+=> package com.arrays;
+
+import java.util.Scanner;
+
+public class EvenAndOddElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //Create an Array
+        int arr[] = new int[6];
+
+        //Adding array elements
+        System.out.println("Enter the array elements: ");
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        //Logic :
+        int countEven = 0;
+        System.out.println("Even Elements");
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] % 2 == 0) {
+                System.out.print(arr[i] + " ");
+                countEven++;
+            }
+        }
+        System.out.println("\nCount of Even Elements: " + countEven);
+
+        System.out.println();
+
+        int countOdd = 0;
+        System.out.println("\nOdd Elements");
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] % 2 == 1) {
+                System.out.print(arr[i] + " ");
+                countOdd++;
+            }
+        }
+        System.out.println("\nCount of Odd Elements: " + countOdd);
+    }
+}
+
+18.Find all symmetric pairs
+=> package com.arrays;
+
+public class SymmetricPairs {
+
+    public static void main(String[] args) {
+
+        int arr[][] = { {1, 2}, {3, 4}, {5, 1}, {4, 3}, {1, 5} };
+
+        for(int i = 0; i < 5; i++) {
+            for(int j = i+1; j < 5; j++) {
+                if(arr[i][0] == arr[j][1] && arr[i][1] == arr[j][0]) {
+                    System.out.println(arr[i][0] + " " + arr[j][0]);
+                }
+            }
+        }
+    }
+}
+
+19.Maximum product sub-array
+=> package com.arrays;
+
+public class MaxProductOfSubArray {
+
+    public static void main(String[] args) {
+
+        int arr[] = {10, -20, -30, 0, 70, -80, -20};
+
+        int result = arr[0];
+
+        for(int i = 0; i < arr.length; i++) {
+            int mul = arr[i];
+            for(int j = i+1; j < arr.length; j++) {
+                result = Math.max(result, mul);
+                mul = mul * arr[j];
+            }
+            result = Math.max(result, mul);
+        }
+        System.out.println("Maximum sub-array product is: " + result);
+    }
+}
+
+20.finding arrays are disjoint or not
+=> package com.arrays;
+
+public class DisjointArray {
+
+    public static void main(String[] args) {
+
+        //Two arrays are said to be disjoint if the intersection of the array is empty.
+        //Which both array must have Unique elements.
+
+        int arr1[] = {10, 51, 3, 43, 6};
+        int arr2[] = {80, 71, 29, 5};
+
+        boolean isDisjoint = true;
+        for(int i = 0; i < arr1.length; i++) {
+            for(int j = 0; j < arr2.length; j++) {
+                if(arr1[i] == arr2[j]) {
+                    isDisjoint = false;
+                    break;
+                }
+            }
+        }
+        if(isDisjoint) {
+            System.out.print("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+
+21.all numbers of an array be made equal 
+=> package com.arrays;
+
+public class ArrayMadeEqual {
+
+    public static boolean makeEqual(int arr[]) {
+
+        for(int i = 0; i < arr.length; i++) {
+
+            // Divide number by 2
+            while (arr[i] % 2 == 0) {
+                arr[i] /= 2;
+            }
+
+            // Divide number by 3
+            while (arr[i] % 3 == 0) {
+                arr[i] /= 3;
+            }
+        }
+
+        // Remaining numbers
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] != arr[0]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        int arr[] = { 50, 100, 75 };
+
+        //This is an Equal Array
+        //Ex: arr[0] = 25
+        //Ex: arr[1] = 25
+        //Ex: arr[2] = 25
+
+        if(makeEqual(arr)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+
+22.Rotation of elements of array left and right 
+=> package com.arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class RotationOfElements {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Original Array" + Arrays.toString(array));
+
+        System.out.println("Enter the number of elements to shift: ");
+        int k = sc.nextInt();
+
+        int temp[] = new int[k];
+
+        // Store the first k elements in temp[]
+        for (int i = 0; i < k; i++) {
+            temp[i] = array[i];
+        }
+
+        // Shift the remaining elements to the left
+        for (int i = k; i < array.length; i++) {
+            array[i - k] = array[i];
+        }
+
+        // Add elements from temp[] at the end of the array
+        for (int i = 0; i < k; i++) {
+            array[array.length - k + i] = temp[i];
+        }
+
+        System.out.println("Array after shifting");
+        System.out.println(Arrays.toString(array));
+    }
+}
+
+23.
